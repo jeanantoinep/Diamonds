@@ -1,0 +1,1 @@
+const Diamond = require('../models/diamondModel');
