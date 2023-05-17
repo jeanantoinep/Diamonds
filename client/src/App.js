@@ -1,24 +1,21 @@
-import React from "react";
-import "./App.css";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+// import Dashboard from "./components/dashboard/Dashboard.js";
+import Login from "./components/authentication/Login.js";
+import Register from "./components/authentication/Register.js";
 
-function App() {
-  const [data, setData] = React.useState(null);
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }
-  , []);
 
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          {data ? data : "Loading..."}
-        </p>
-      </header>
-    </div>
-  );
-}
+    
+    <Router>
+     
+      <Routes>
+        <Route path="/" element={<Login/>}  />
+        <Route path="/register" element={<Register />} />
+        {/* <Route path="/dashboard" element={<Dashboard />}/> */}
+        
 
-export default App;
+      </Routes>
+
+    </Router>);
+}

@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require("cors")
+const cors = require("cors");
 const userRoutes = require("./routes/userRoutes.js");
 const bodyParser = require('body-parser');
 
@@ -33,7 +33,12 @@ app.get ('/api', (req, res) => {
     }
 );
 
-app.use(cors());
+const corsOptions ={
+    origin:'http://localhost:3000', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(userRoutes);
 
