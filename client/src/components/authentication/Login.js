@@ -44,7 +44,7 @@ const Login = () => {
               <form onSubmit={handleLogin} className="box">
                 <p className="has-text-centered">{msg}</p>
                 <div className="field mt-5">
-                  <label className="label">Email or Username</label>
+                  <label className="label">Email</label>
                   <div className="controls">
                     <input
                       type="text"
