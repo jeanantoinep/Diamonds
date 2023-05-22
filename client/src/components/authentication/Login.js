@@ -68,7 +68,7 @@ const Login = () => {
                   </div>
                 </div>
                 <div className="field mt-5">
-                  <button className="button"onClick={handleLogin}>
+                  <button className="loginButton"onClick={handleLogin}>
                     Login</button>
                 </div>
                 <div className="field mt-5">

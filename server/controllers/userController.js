@@ -10,7 +10,7 @@ const { checkPassword } = require("../utils/password/checkPassword.js");
 
 const register = async (req, res) => {
     const { username, email, password, role } = req.body;
-    console.log(req);
+    //console.log(req.body.username);
     try {
       // check for duplicate users
       const duplicateUser = await User.findOne({
@@ -47,7 +47,7 @@ const register = async (req, res) => {
           },
         };
         const token = jwt.sign(payload, "RANDOM-TOKEN", { expiresIn: "24h" });
-        console.log(password);
+       
         console.log(email);
         return res.status(200).json({
           message: "New user successfully created ! 🔥",

@@ -1,0 +1,21 @@
+.sidebar {
+    background-color: gray;
+    border-right: 1px solid black;
+  }
+  
+  .sidebar-item {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .sidebar-item:last-child {
+    border-bottom: none;
+  }
+  
+  .sidebar-item:hover {
+    background-color: lightgray;
+  }
+  
